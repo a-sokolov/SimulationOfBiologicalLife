@@ -34,6 +34,7 @@ public class Game extends Observable {
 	 * Чтение описания игры
 	 * @return Описание игры
 	 */
+	@Deprecated
 	public String getName() {
 		return name;
 	}

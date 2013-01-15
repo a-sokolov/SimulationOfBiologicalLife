@@ -10,13 +10,14 @@ import java.util.Observer;
  * @version 1.0
  * @see Observer
  * @see Game
+ * @see GameTimeConverter
  */
 public class GameBody implements Observer {
-
+	
 	public void update(Observable obs, Object o) {
 		if (obs.hasChanged()) {
 			if (obs instanceof Game) {
-				long currentTime = ((Game) obs).getTime();
+				GameTimeConverter timeConverter = new GameTimeConverter(((Game) obs).getTime());
 			}
 		}
 	}

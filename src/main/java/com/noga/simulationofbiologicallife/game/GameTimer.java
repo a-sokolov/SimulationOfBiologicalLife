@@ -12,18 +12,22 @@ package com.noga.simulationofbiologicallife.game;
  */
 public class GameTimer extends Thread {
 	/** Кол-во минут в часе */
-	private final static int MINUTES_IN_HOUR = 60;
+	@Deprecated
+	private static final int MINUTES_IN_HOUR = 60;
 	/** Кол-во минут в дне */
-	private final static int MINUTES_IN_DAY = 1440;
+	@Deprecated
+	private static final int MINUTES_IN_DAY = 1440;
 	/** Кол-во минут в неделе */
-	private final static int MINUTES_IN_WEEK = 10080;
+	@Deprecated
+	private static final int MINUTES_IN_WEEK = 10080;
 	
 	/** Время паузы в миллисекундах */
-	private final static int DELAY_PERIOD = 1000;
+	private static final int DELAY_PERIOD = 1000;
 	/** Кол-во дней в месяце */
-	private final static int DAYS_IN_MONTH = 30;
+	@Deprecated
+	private static final int DAYS_IN_MONTH = 30;
 	/** Время уведомления */
-	private final static int NOTICE_PERIOD = 60;
+	private static final int NOTICE_PERIOD = 60;
 	
 	/** Счетчик времени в игровых минутах */
 	private static long currentTime;
@@ -44,30 +48,6 @@ public class GameTimer extends Thread {
 		this.game = game;
 	}
 	
-	/**
-	 * Инициализация кол-во итераций в зависимости от текущего интервала {@link interval}
-	 * @return Кол-во итераций
-	 * @see TimeInterval
-	 */
-	private int getLoops() {
-		int loops;
-		
-		switch(interval) {
-			case HOUR:
-				loops = MINUTES_IN_HOUR; break;
-			case DAY:
-				loops = MINUTES_IN_DAY; break;
-			case WEEK:
-				loops = MINUTES_IN_WEEK; break;
-			case MONTH:
-				loops = MINUTES_IN_DAY * DAYS_IN_MONTH; break;
-			default:
-				loops = 1;
-		}
-		
-		return loops;
-	}
-	
 	@Override
 	public void run() {
 		// обнуляем счетчик времени
@@ -77,7 +57,7 @@ public class GameTimer extends Thread {
 		
 		while(!isInterrupted()) {
 			// инициализация кол-ва итераций
-			loops = getLoops();
+			loops = interval.minutes();
 			
 			try {
 				// "Временной" цикл
