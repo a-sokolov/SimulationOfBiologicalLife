@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+
+# Not used files and directories #
+/.project
+/.classpath
+.settings
+target
