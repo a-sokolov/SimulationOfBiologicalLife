@@ -1,6 +1,6 @@
 package com.noga.simulationofbiologicallife.game;
 
-import java.util.Observable;
+import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
  * Класс, который отвечает за запуск и управление игрой.<br>
@@ -12,22 +12,28 @@ import java.util.Observable;
  * game.stop();</i>
  * @author NOGA
  * @version 1.0
- * @see Observable
+ * @see GameBody
  */
-public class Game extends Observable {
+public class Game {
 	/** Описание игры */
 	private String name;
 	/** Ссылка на игровой таймер {@link GameTimer} */
 	private GameTimer timer;
+	/** Ссылка на тело игры {@link GameBody} */
+	private GameBody body;
 	
 	/**
 	 * Конструктор
 	 * @param name Описание текущей игры
+	 * @param body Тело игры
 	 * @see GameTimer
+	 * @see GameBody
 	 */
-	public Game(String name) {
+	public Game(String name, GameBody body) {
 		timer = new GameTimer(this);
+		
 		this.name = name;
+		this.body = body;
 	}
 	
 	/**
@@ -92,10 +98,9 @@ public class Game extends Observable {
 		timer.setInterval(interval);
 	}
 	
-	/** Уведомление слушателей о том что наступила очередная итерация игры */
+	/** Уведомление о том что наступила очередная итерация игры */
 	public void update() {
-		setChanged();
-		notifyObservers();
+		body.update(this);
 	}
 	
 	@Override

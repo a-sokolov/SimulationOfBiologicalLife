@@ -1,5 +1,7 @@
 package com.noga.simulationofbiologicallife.game;
 
+import com.noga.simulationofbiologicallife.core.TimeInterval;
+
 /**
  * Игровой таймер. По-умолчанию, секунда реального времени
  * равняется игровой минуте.
@@ -12,18 +14,22 @@ package com.noga.simulationofbiologicallife.game;
  */
 public class GameTimer extends Thread {
 	/** Кол-во минут в часе */
+	@SuppressWarnings("unused")
 	@Deprecated
 	private static final int MINUTES_IN_HOUR = 60;
 	/** Кол-во минут в дне */
+	@SuppressWarnings("unused")
 	@Deprecated
 	private static final int MINUTES_IN_DAY = 1440;
 	/** Кол-во минут в неделе */
+	@SuppressWarnings("unused")
 	@Deprecated
 	private static final int MINUTES_IN_WEEK = 10080;
 	
 	/** Время паузы в миллисекундах */
 	private static final int DELAY_PERIOD = 1000;
 	/** Кол-во дней в месяце */
+	@SuppressWarnings("unused")
 	@Deprecated
 	private static final int DAYS_IN_MONTH = 30;
 	/** Время уведомления */

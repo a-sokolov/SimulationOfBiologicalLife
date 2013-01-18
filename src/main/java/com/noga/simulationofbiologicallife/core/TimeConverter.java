@@ -1,6 +1,6 @@
-package com.noga.simulationofbiologicallife.game;
+package com.noga.simulationofbiologicallife.core;
 
-import static com.noga.simulationofbiologicallife.game.TimeInterval.*;
+import static com.noga.simulationofbiologicallife.core.TimeInterval.*;
 
 /**
  * Конвертирование игрового времени (минуты) в следующие форматы:
@@ -13,7 +13,7 @@ import static com.noga.simulationofbiologicallife.game.TimeInterval.*;
  * @author NOGA
  * @version 1.0
  */
-public class GameTimeConverter {
+public class TimeConverter {
 	/** Текущее игровое время в минутах */
 	private long minutes;
 	/** Игровое время в часах */ 
@@ -31,7 +31,7 @@ public class GameTimeConverter {
 	 * Конструктор
 	 * @param time Время в игровых минутах
 	 */
-	public GameTimeConverter(long time) {
+	public TimeConverter(long time) {
 		minutes = time;
 		hours = time / HOUR.minutes();
 		days = time / DAY.minutes();

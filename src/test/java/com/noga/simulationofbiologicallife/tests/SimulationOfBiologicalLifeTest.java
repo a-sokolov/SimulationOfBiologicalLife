@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.noga.simulationofbiologicallife.core.Organ;
-import com.noga.simulationofbiologicallife.game.GameTimeConverter;
-import com.noga.simulationofbiologicallife.game.TimeInterval;
+import com.noga.simulationofbiologicallife.model.Organ;
+import com.noga.simulationofbiologicallife.core.TimeConverter;
+import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 public class SimulationOfBiologicalLifeTest {
 	@Test
@@ -17,7 +17,7 @@ public class SimulationOfBiologicalLifeTest {
 	
 	@Test
 	public void testGameTimeConverter() {
-		GameTimeConverter timeConverter = new GameTimeConverter(60 * 24 * 365);
+		TimeConverter timeConverter = new TimeConverter(60 * 24 * 365);
 		
 		assertEquals("Ошибочное кол-во часов", 24 * 365, timeConverter.getTime(TimeInterval.HOUR));
 		assertEquals("Ошибочное кол-во дней", 365, timeConverter.getTime(TimeInterval.DAY));

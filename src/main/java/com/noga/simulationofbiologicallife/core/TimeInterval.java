@@ -1,4 +1,4 @@
-package com.noga.simulationofbiologicallife.game;
+package com.noga.simulationofbiologicallife.core;
 
 /**
  * Перечисления временных интервалов.

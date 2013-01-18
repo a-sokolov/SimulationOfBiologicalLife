@@ -1,4 +1,4 @@
-package com.noga.simulationofbiologicallife.core;
+package com.noga.simulationofbiologicallife.model;
 
 /**
  * Сердце 

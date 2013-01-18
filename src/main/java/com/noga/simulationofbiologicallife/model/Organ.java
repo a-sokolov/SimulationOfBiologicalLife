@@ -1,4 +1,4 @@
-package com.noga.simulationofbiologicallife.core;
+package com.noga.simulationofbiologicallife.model;
 
 /**
  * ќрган (др.-греч. Ч Ђинструментї) Ч обособленна€ совокупность различных 
