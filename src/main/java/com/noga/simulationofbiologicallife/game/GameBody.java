@@ -2,6 +2,8 @@ package com.noga.simulationofbiologicallife.game;
 
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Set;
+import java.util.HashSet;
 
 /**
  * “ело игры, которое слушает наблюдаемого {@link Game} и в случае
@@ -13,12 +15,21 @@ import java.util.Observer;
  * @see GameTimeConverter
  */
 public class GameBody implements Observer {
+	private Set<ModelSystem> systems = new HashSet<ModelSystem>();
 	
 	public void update(Observable obs, Object o) {
 		if (obs.hasChanged()) {
 			if (obs instanceof Game) {
-				GameTimeConverter timeConverter = new GameTimeConverter(((Game) obs).getTime());
+				GameTimeConverter time = new GameTimeConverter(((Game) obs).getTime());
+				
+				for(ModelSystem system : systems) {
+					system.updateInterval(time);
+				}
 			}
 		}
+	}
+	
+	public boolean addSystem(ModelSystem system) {
+		return systems.add(system);
 	}
 }
