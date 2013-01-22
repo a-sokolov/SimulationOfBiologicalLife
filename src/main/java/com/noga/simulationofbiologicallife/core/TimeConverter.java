@@ -33,11 +33,11 @@ public class TimeConverter {
 	 */
 	public TimeConverter(long time) {
 		minutes = time;
-		hours = time / HOUR.minutes();
-		days = time / DAY.minutes();
-		weeks = time / WEEK.minutes();
-		months = time / MONTH.minutes();
-		years = time / YEAR.minutes();
+		hours = time / HOUR.getMinutes();
+		days = time / DAY.getMinutes();
+		weeks = time / WEEK.getMinutes();
+		months = time / MONTH.getMinutes();
+		years = time / YEAR.getMinutes();
 	}
 	
 	/**

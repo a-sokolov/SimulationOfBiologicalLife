@@ -63,7 +63,7 @@ public class GameTimer extends Thread {
 		
 		while(!isInterrupted()) {
 			// инициализаци€ кол-ва итераций
-			loops = interval.minutes();
+			loops = interval.getMinutes();
 			
 			try {
 				// "¬ременной" цикл

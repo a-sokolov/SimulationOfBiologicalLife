@@ -9,14 +9,19 @@ import com.noga.simulationofbiologicallife.core.Systems;
  * @author sbt-sokolov-av
  * @version 1.0
  * @see Model
+ * @see Sex
  */
 public class Human extends Model {
+	/** Пол человека */
+	private Sex sex;
+	
 	/**
 	 * Конструктор
 	 * @see HumanSystemFactory 
 	 */
-	public Human() {
+	public Human(Sex sex) {
 		this(new HumanSystemFactory());
+		this.sex = sex;
 	}
 	
 	/**
@@ -27,7 +32,11 @@ public class Human extends Model {
 	public Human(SystemFactory systemFactory) {
 		super(systemFactory);
 	}
-
+	
+	public Sex getSex() {
+		return sex;
+	}
+	
 	@Override
 	public void prepare() {
 		addSystem(getSystemFactory().createSystem(Systems.GROW, this));

@@ -3,6 +3,7 @@ package com.noga.simulationofbiologicallife.application;
 import com.noga.simulationofbiologicallife.game.Game;
 import com.noga.simulationofbiologicallife.game.GameBody;
 import com.noga.simulationofbiologicallife.human.Human;
+import com.noga.simulationofbiologicallife.human.Sex;
 import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
@@ -19,7 +20,7 @@ public class Application {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Simulation Of Biological Life");
 		
-		GameBody body = new GameBody(new Human());
+		GameBody body = new GameBody(new Human(Sex.MAN));
 		Game game = new Game("new game", body);
 		
 		game.setInterval(TimeInterval.DAY);

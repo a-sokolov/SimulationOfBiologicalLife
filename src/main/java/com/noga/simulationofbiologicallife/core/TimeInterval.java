@@ -14,7 +14,7 @@ public enum TimeInterval {
 		this.minutes = minutes;
 	}
 	
-	public int minutes() {
+	public int getMinutes() {
 		return minutes;
 	}
 }
