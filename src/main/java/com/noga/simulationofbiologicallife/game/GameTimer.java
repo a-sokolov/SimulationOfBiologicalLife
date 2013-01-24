@@ -11,29 +11,13 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * @version 1.0
  * @see Game
  * @see Thread
+ * @see TimeInterval
  */
 public class GameTimer extends Thread {
-	/** Кол-во минут в часе */
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final int MINUTES_IN_HOUR = 60;
-	/** Кол-во минут в дне */
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final int MINUTES_IN_DAY = 1440;
-	/** Кол-во минут в неделе */
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final int MINUTES_IN_WEEK = 10080;
-	
 	/** Время паузы в миллисекундах */
 	private static final int DELAY_PERIOD = 1000;
-	/** Кол-во дней в месяце */
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final int DAYS_IN_MONTH = 30;
 	/** Время уведомления */
-	private static final int NOTICE_PERIOD = 60;
+	private static final int NOTICE_PERIOD = 2;
 	
 	/** Счетчик времени в игровых минутах */
 	private static long currentTime;

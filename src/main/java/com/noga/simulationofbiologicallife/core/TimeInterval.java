@@ -6,7 +6,7 @@ package com.noga.simulationofbiologicallife.core;
  * @version 1.0
  */
 public enum TimeInterval {
-	MINUTE(1), HOUR(60), DAY(60 * 24), WEEK(60 * 24 * 7), MONTH(60 * 24 * 30), YEAR(60 * 24 * 365);
+	MINUTE(1), HOUR(60), DAY(60 * 24), WEEK(60 * 24 * 7), MONTH(60 * 24 * 30), YEAR(60 * 24 * 365), INFINITY(-1);
 	
 	private final int minutes;
 	

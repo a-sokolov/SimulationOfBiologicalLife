@@ -24,6 +24,14 @@ public class GameBody {
 	}
 	
 	/**
+	 * Подготовка данных до момента запуска игры
+	 * @see Model
+	 */
+	public void prepare() {
+		model.prepare();
+	}
+	
+	/**
 	 * Итерация обновления данных модели
 	 * @param game Текущая игра
 	 * @see TimeConverter

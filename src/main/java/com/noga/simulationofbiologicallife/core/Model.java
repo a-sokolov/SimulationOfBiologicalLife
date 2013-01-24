@@ -15,13 +15,18 @@ public abstract class Model {
 	private SystemFactory systemFactory;
 	/** Коллекция систем */
 	private Set<ModelSystem> systems = new HashSet<ModelSystem>();
+	/** Половая принадлежность модели */
+	private Sex sex;
 	
 	/**
 	 * Конструктор
+	 * @param sex Пол
 	 * @param systemFactory Фабрика систем
 	 * @see SystemFactory
+	 * @see Sex
 	 */
-	public Model(SystemFactory systemFactory) {
+	public Model(Sex sex, SystemFactory systemFactory) {
+		this.sex = sex;
 		this.systemFactory = systemFactory;
 	}
 	
@@ -54,5 +59,13 @@ public abstract class Model {
 	 */
 	public SystemFactory getSystemFactory() {
 		return systemFactory;
+	}
+	
+	/**
+	 * Инициализация половой принадлежности
+	 * @return Пол
+	 */
+	public Sex getSex() {
+		return sex;
 	}
 }

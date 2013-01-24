@@ -31,7 +31,6 @@ public class Game {
 	 */
 	public Game(String name, GameBody body) {
 		timer = new GameTimer(this);
-		
 		this.name = name;
 		this.body = body;
 	}
@@ -55,6 +54,7 @@ public class Game {
 	
 	/** Старт */
 	public void start() {
+		body.prepare();
 		timer.start();
 		System.out.println("Game is started");
 	}
