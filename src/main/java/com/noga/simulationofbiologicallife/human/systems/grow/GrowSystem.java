@@ -75,7 +75,7 @@ public class GrowSystem extends ModelSystem {
 		, ADVANCED_AGE("Пожилой возраст", new Period(YEAR.getMinutes() * 61, YEAR.getMinutes() * 74)
 									    , new Period(YEAR.getMinutes() * 56, YEAR.getMinutes() * 74))
 		, SENIUM("Старческий возраст", new Period(YEAR.getMinutes() * 75, YEAR.getMinutes() * 90))
-		, LONG_LIVER("Долгожители", new Period(YEAR.getMinutes() * 90, YEAR.getMinutes() * 122));
+		, LONG_LIVER("Долгожитель", new Period(YEAR.getMinutes() * 90, YEAR.getMinutes() * 122));
 		 
 		/** Описание периода  */
 		private String description;
