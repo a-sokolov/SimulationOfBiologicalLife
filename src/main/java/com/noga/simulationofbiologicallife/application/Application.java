@@ -1,5 +1,6 @@
 package com.noga.simulationofbiologicallife.application;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.io.File;
 
@@ -28,10 +29,19 @@ public class Application {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
+//		DecimalFormat format = new DecimalFormat(".00");
+//		float a = 1111.02f;
+//		
+//		System.out.println(String.format("bla-bla %s", format.format(a)));
+		
+//		String source = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.txt";
+		String target = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.xml";
+//		
+//		PrepareLifeExpectancyXML generatorXML = new PrepareLifeExpectancyXML();
+//		generatorXML.generate(source, target);
+//		
 		Serializer serializer = new Persister();
-		File source = new File("C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\resource\\lifeexpectancy.xml");
-
-		LifeExpectancy example = serializer.read(LifeExpectancy.class, source);
+		LifeExpectancy example = serializer.read(LifeExpectancy.class, new File(target));
 		System.out.println(example);
 		
 		List<Entry> entries = example.getEntries();

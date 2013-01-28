@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyList version="1.0">
+<list>
+<entry id="1" name="Андорра"><avg>82.75</avg><man>80.4</man><woman>85.1</woman></entry>
+<entry id="2" name="Япония"><avg>82.15</avg><man>78.7</man><woman>85.6</woman></entry>
+<entry id="3" name="Сан-Марино"><avg>82</avg><man>78.4</man><woman>85.6</woman></entry>
+<entry id="4" name="Сингапур"><avg>82</avg><man>79.3</man><woman>84.7</woman></entry>
+<entry id="5" name="Франция"><avg>81</avg><man>77.7</man><woman>84.3</woman></entry>
+<entry id="6" name="Австралия"><avg>80.7</avg><man>77.8</man><woman>83.6</woman></entry>
+<entry id="7" name="Швейцария"><avg>80.7</avg><man>77.8</man><woman>83.6</woman></entry>
+<entry id="8" name="Швеция"><avg>80.7</avg><man>78.4</man><woman>83</woman></entry>
+<entry id="9" name="Исландия"><avg>80.45</avg><man>78.3</man><woman>82.6</woman></entry>
+<entry id="10" name="Канада"><avg>80.45</avg><man>77</man><woman>83.9</woman></entry>
+<entry id="11" name="Италия"><avg>80.05</avg><man>77</man><woman>83.1</woman></entry>
+<entry id="12" name="Монако"><avg>79.95</avg><man>76</man><woman>83.9</woman></entry>
+<entry id="13" name="Норвегия"><avg>79.9</avg><man>76.5</man><woman>83.3</woman></entry>
+<entry id="14" name="Израиль"><avg>79.9</avg><man>76.5</man><woman>83.3</woman></entry>
+<entry id="15" name="Испания"><avg>79.9</avg><man>76.5</man><woman>83.3</woman></entry>
+<entry id="16" name="Лихтенштейн"><avg>79.8</avg><man>76.2</man><woman>83.4</woman></entry>
+<entry id="17" name="Греция"><avg>79.5</avg><man>76.9</man><woman>82.1</woman></entry>
+<entry id="18" name="Австрия"><avg>79.3</avg><man>76.3</man><woman>82.3</woman></entry>
+<entry id="19" name="Мальта"><avg>79.25</avg><man>77</man><woman>81.5</woman></entry>
+<entry id="20" name="Люксембург"><avg>79.15</avg><man>75.8</man><woman>82.5</woman></entry>
+<entry id="21" name="Южная Корея"><avg>79.1</avg><man>78.1</man><woman>80.1</woman></entry>
+<entry id="22" name="Нидерланды"><avg>79.05</avg><man>76.8</man><woman>81.3</woman></entry>
+<entry id="23" name="Новая Зеландия"><avg>79.05</avg><man>76</man><woman>82.1</woman></entry>
+<entry id="24" name="Германия"><avg>79.05</avg><man>76</man><woman>82.1</woman></entry>
+<entry id="25" name="Бельгия"><avg>79</avg><man>75.8</man><woman>82.2</woman></entry>
+<entry id="26" name="Великобритания"><avg>78.75</avg><man>76.2</man><woman>81.3</woman></entry>
+<entry id="27" name="Финляндия"><avg>78.75</avg><man>75.2</man><woman>82.3</woman></entry>
+<entry id="28" name="Иордания"><avg>78.6</avg><man>76</man><woman>81.2</woman></entry>
+<entry id="29" name="Босния и Герцеговина"><avg>78.3</avg><man>74.6</man><woman>82</woman></entry>
+<entry id="30" name="Соединенные Штаты Америки"><avg>78.1</avg><man>75.2</man><woman>81</woman></entry>
+<entry id="31" name="Кипр"><avg>78.05</avg><man>75.6</man><woman>80.5</woman></entry>
+<entry id="32" name="Дания"><avg>78.05</avg><man>75.7</man><woman>80.4</woman></entry>
+<entry id="33" name="Португалия"><avg>78</avg><man>74.6</man><woman>81.4</woman></entry>
+<entry id="34" name="Ирландия"><avg>78</avg><man>75.3</man><woman>80.7</woman></entry>
+<entry id="35" name="Албания"><avg>77.75</avg><man>75</man><woman>80.5</woman></entry>
+<entry id="36" name="Кувейт"><avg>77.4</avg><man>76.3</man><woman>78.5</woman></entry>
+<entry id="37" name="Коста-Рика"><avg>77.25</avg><man>74.6</man><woman>79.9</woman></entry>
+<entry id="38" name="Чили"><avg>77.05</avg><man>73.7</man><woman>80.4</woman></entry>
+<entry id="39" name="Ливия"><avg>76.9</avg><man>74.6</man><woman>79.2</woman></entry>
+<entry id="40" name="Словения"><avg>76.65</avg><man>72.8</man><woman>80.5</woman></entry>
+<entry id="41" name="Польша"><avg>76.65</avg><man>73.9</man><woman>79.4</woman></entry>
+<entry id="42" name="Эквадор"><avg>76.65</avg><man>73.7</man><woman>79.6</woman></entry>
+<entry id="43" name="Грузия"><avg>76.55</avg><man>73</man><woman>80.1</woman></entry>
+<entry id="44" name="Чехия"><avg>76.5</avg><man>73.1</man><woman>79.9</woman></entry>
+<entry id="45" name="Аргентина"><avg>76.4</avg><man>72.6</man><woman>80.2</woman></entry>
+<entry id="46" name="Уругвай"><avg>76</avg><man>72.7</man><woman>79.3</woman></entry>
+<entry id="47" name="Куба"><avg>75.95</avg><man>72.6</man><woman>79.3</woman></entry>
+<entry id="48" name="Саудовская Аравия"><avg>75.95</avg><man>73.9</man><woman>78</woman></entry>
+<entry id="49" name="Мексика"><avg>75.95</avg><man>73.1</man><woman>78.8</woman></entry>
+<entry id="50" name="Объединенные Арабские Эмираты"><avg>75.8</avg><man>73.2</man><woman>78.4</woman></entry>
+<entry id="51" name="Тринидад и Тобаго"><avg>75.45</avg><man>76.8</man><woman>74.1</woman></entry>
+<entry id="52" name="Парагвай"><avg>75.4</avg><man>72.8</man><woman>78</woman></entry>
+<entry id="53" name="Тунис"><avg>75.4</avg><man>73.6</man><woman>77.2</woman></entry>
+<entry id="54" name="Бруней"><avg>75.35</avg><man>73.1</man><woman>77.6</woman></entry>
+<entry id="55" name="Сербия"><avg>75.2</avg><man>72.5</man><woman>77.9</woman></entry>
+<entry id="56" name="Доминика"><avg>75.2</avg><man>72.2</man><woman>78.2</woman></entry>
+<entry id="57" name="Хорватия"><avg>75.05</avg><man>71.3</man><woman>78.8</woman></entry>
+<entry id="58" name="Словакия"><avg>75.05</avg><man>71</man><woman>79.1</woman></entry>
+<entry id="59" name="Шри-Ланка"><avg>74.85</avg><man>72.8</man><woman>76.9</woman></entry>
+<entry id="60" name="Панама"><avg>74.85</avg><man>72.7</man><woman>77</woman></entry>
+<entry id="61" name="Бахрейн"><avg>74.75</avg><man>72.2</man><woman>77.3</woman></entry>
+<entry id="62" name="Черногория"><avg>74.6</avg><man>72.4</man><woman>76.8</woman></entry>
+<entry id="63" name="Литва"><avg>74.6</avg><man>69.5</man><woman>79.7</woman></entry>
+<entry id="64" name="Македония"><avg>74.3</avg><man>71.7</man><woman>76.9</woman></entry>
+<entry id="65" name="Сент-Люсия"><avg>74.2</avg><man>70.5</man><woman>77.9</woman></entry>
+<entry id="66" name="Катар"><avg>74.2</avg><man>71.6</man><woman>76.8</woman></entry>
+<entry id="67" name="Сент-Винсент и Гренадины"><avg>74.1</avg><man>72.2</man><woman>76</woman></entry>
+<entry id="68" name="Оман"><avg>73.7</avg><man>71.4</man><woman>76</woman></entry>
+<entry id="69" name="Алжир"><avg>73.45</avg><man>71.9</man><woman>75</woman></entry>
+<entry id="70" name="Венесуэла"><avg>73.35</avg><man>70.2</man><woman>76.5</woman></entry>
+<entry id="71" name="Суринам"><avg>73.3</avg><man>70.5</man><woman>76.1</woman></entry>
+<entry id="72" name="Ливан"><avg>73.25</avg><man>70.7</man><woman>75.8</woman></entry>
+<entry id="73" name="Болгария"><avg>73.2</avg><man>70</man><woman>76.4</woman></entry>
+<entry id="74" name="Соломоновы Острова"><avg>73.2</avg><man>70.6</man><woman>75.8</woman></entry>
+<entry id="75" name="Ямайка"><avg>73.15</avg><man>71.4</man><woman>74.9</woman></entry>
+<entry id="76" name="Доминиканская Республика"><avg>73.1</avg><man>71.3</man><woman>74.9</woman></entry>
+<entry id="77" name="Венгрия"><avg>73.05</avg><man>68.7</man><woman>77.4</woman></entry>
+<entry id="78" name="Барбадос"><avg>73</avg><man>71</man><woman>75</woman></entry>
+<entry id="79" name="Китай"><avg>72.95</avg><man>71.1</man><woman>74.8</woman></entry>
+<entry id="80" name="Турция"><avg>72.95</avg><man>70.4</man><woman>75.5</woman></entry>
+<entry id="81" name="Маврикий"><avg>72.9</avg><man>68.9</man><woman>76.9</woman></entry>
+<entry id="82" name="Малайзия"><avg>72.9</avg><man>70.1</man><woman>75.7</woman></entry>
+<entry id="83" name="Бразилия"><avg>72.75</avg><man>69</man><woman>76.5</woman></entry>
+<entry id="84" name="Сент-Китс и Невис"><avg>72.75</avg><man>69.8</man><woman>75.7</woman></entry>
+<entry id="85" name="Таиланд"><avg>72.6</avg><man>70.2</man><woman>75</woman></entry>
+<entry id="86" name="Эстония"><avg>72.5</avg><man>66.9</man><woman>78.1</woman></entry>
+<entry id="87" name="Сейшелы"><avg>72.45</avg><man>67</man><woman>77.9</woman></entry>
+<entry id="88" name="Антигуа и Барбуда"><avg>72.45</avg><man>70</man><woman>74.9</woman></entry>
+<entry id="89" name="Армения"><avg>72.4</avg><man>68.5</man><woman>76.3</woman></entry>
+<entry id="90" name="Колумбия"><avg>72.3</avg><man>68.4</man><woman>76.2</woman></entry>
+<entry id="91" name="Румыния"><avg>72</avg><man>68.4</man><woman>75.6</woman></entry>
+<entry id="92" name="Северная Корея"><avg>72</avg><man>69.2</man><woman>74.8</woman></entry>
+<entry id="93" name="Сальвадор"><avg>71.9</avg><man>68.2</man><woman>75.6</woman></entry>
+<entry id="94" name="Латвия"><avg>71.75</avg><man>66.4</man><woman>77.1</woman></entry>
+<entry id="95" name="Египет"><avg>71.6</avg><man>69</man><woman>74.2</woman></entry>
+<entry id="96" name="Самоа"><avg>71.4</avg><man>68.5</man><woman>74.3</woman></entry>
+<entry id="97" name="Марокко"><avg>71.3</avg><man>68.9</man><woman>73.7</woman></entry>
+<entry id="98" name="Вьетнам"><avg>71.2</avg><man>68.3</man><woman>74.1</woman></entry>
+<entry id="99" name="Кабо-Верде"><avg>71.05</avg><man>67.7</man><woman>74.4</woman></entry>
+<entry id="100" name="Никарагуа"><avg>70.95</avg><man>68.8</man><woman>73.1</woman></entry>
+<entry id="101" name="Палау"><avg>70.8</avg><man>67.5</man><woman>74.1</woman></entry>
+<entry id="102" name="Сирия"><avg>70.65</avg><man>69.3</man><woman>72</woman></entry>
+<entry id="103" name="Маршалловы Острова"><avg>70.65</avg><man>68.6</man><woman>72.7</woman></entry>
+<entry id="104" name="Иран"><avg>70.6</avg><man>69.1</man><woman>72.1</woman></entry>
+<entry id="105" name="Филиппины"><avg>70.6</avg><man>67.6</man><woman>73.6</woman></entry>
+<entry id="106" name="Федеративные штаты Микронезии"><avg>70.4</avg><man>68.5</man><woman>72.3</woman></entry>
+<entry id="107" name="Молдавия"><avg>70.3</avg><man>66.5</man><woman>74.1</woman></entry>
+<entry id="108" name="Индонезия"><avg>70.25</avg><man>67.7</man><woman>72.8</woman></entry>
+<entry id="109" name="Тонга"><avg>70.2</avg><man>67.6</man><woman>72.8</woman></entry>
+<entry id="110" name="Фиджи"><avg>70.2</avg><man>67.6</man><woman>72.8</woman></entry>
+<entry id="111" name="Беларусь"><avg>70.2</avg><man>64.3</man><woman>76.1</woman></entry>
+<entry id="112" name="Перу"><avg>70.15</avg><man>68.3</man><woman>72</woman></entry>
+<entry id="113" name="Гватемала"><avg>69.7</avg><man>67.9</man><woman>71.5</woman></entry>
+<entry id="114" name="Гондурас"><avg>69.4</avg><man>67.8</man><woman>71</woman></entry>
+<entry id="115" name="Ирак"><avg>69.35</avg><man>68</man><woman>70.7</woman></entry>
+<entry id="116" name="Киргизия"><avg>68.9</avg><man>64.8</man><woman>73</woman></entry>
+<entry id="117" name="Индия"><avg>68.75</avg><man>66.3</man><woman>71.2</woman></entry>
+<entry id="118" name="Тувалу"><avg>68.7</avg><man>66.4</man><woman>71</woman></entry>
+<entry id="119" name="Туркмения"><avg>68.35</avg><man>65.2</man><woman>71.5</woman></entry>
+<entry id="120" name="Белиз"><avg>68.3</avg><man>66.4</man><woman>70.2</woman></entry>
+<entry id="121" name="Украина"><avg>68.1</avg><man>62.2</man><woman>74</woman></entry>
+<entry id="122" name="Сан-Томе и Принсипи"><avg>67.65</avg><man>66</man><woman>69.3</woman></entry>
+<entry id="123" name="Казахстан"><avg>67.35</avg><man>61.9</man><woman>72.8</woman></entry>
+<entry id="124" name="Монголия"><avg>67.05</avg><man>64.6</man><woman>69.5</woman></entry>
+<entry id="125" name="Восточный Тимор"><avg>66.65</avg><man>64.3</man><woman>69</woman></entry>
+<entry id="126" name="Азербайджан"><avg>66.3</avg><man>61.9</man><woman>70.7</woman></entry>
+<entry id="127" name="Боливия"><avg>66.25</avg><man>63.5</man><woman>69</woman></entry>
+<entry id="128" name="Гайана"><avg>66.25</avg><man>63.5</man><woman>69</woman></entry>
+<entry id="129" name="Россия"><avg>66.05</avg><man>59.1</man><woman>73</woman></entry>
+<entry id="130" name="Багамы"><avg>65.7</avg><man>62.4</man><woman>69</woman></entry>
+<entry id="131" name="Папуа - Новая Гвинея"><avg>65.7</avg><man>63.4</man><woman>68</woman></entry>
+<entry id="132" name="Гренада"><avg>65.25</avg><man>63.4</man><woman>67.1</woman></entry>
+<entry id="133" name="Узбекистан"><avg>65.1</avg><man>61.6</man><woman>68.6</woman></entry>
+<entry id="134" name="Мальдивы"><avg>64.8</avg><man>63.4</man><woman>66.2</woman></entry>
+<entry id="135" name="Таджикистан"><avg>64.7</avg><man>61.6</man><woman>67.8</woman></entry>
+<entry id="136" name="Пакистан"><avg>63.75</avg><man>62.7</man><woman>64.8</woman></entry>
+<entry id="137" name="Науру"><avg>63.55</avg><man>59.9</man><woman>67.2</woman></entry>
+<entry id="138" name="Вануату"><avg>63.25</avg><man>61.7</man><woman>64.8</woman></entry>
+<entry id="139" name="Бангладеш"><avg>62.85</avg><man>62.8</man><woman>62.9</woman></entry>
+<entry id="140" name="Коморы"><avg>62.8</avg><man>60.4</man><woman>65.2</woman></entry>
+<entry id="141" name="Йемен"><avg>62.55</avg><man>60.6</man><woman>64.5</woman></entry>
+<entry id="142" name="Кирибати"><avg>62.5</avg><man>59.4</man><woman>65.6</woman></entry>
+<entry id="143" name="Мьянма"><avg>62.15</avg><man>59</man><woman>65.3</woman></entry>
+<entry id="144" name="Мадагаскар"><avg>62.15</avg><man>60.2</man><woman>64.1</woman></entry>
+<entry id="145" name="Камбоджа"><avg>61.35</avg><man>59.3</man><woman>63.4</woman></entry>
+<entry id="146" name="Непал"><avg>60.55</avg><man>60.8</man><woman>60.3</woman></entry>
+<entry id="147" name="Эритрея"><avg>59.6</avg><man>57.9</man><woman>61.3</woman></entry>
+<entry id="148" name="Гана"><avg>59.55</avg><man>58.7</man><woman>60.4</woman></entry>
+<entry id="149" name="Того"><avg>57.9</avg><man>55.8</man><woman>60</woman></entry>
+<entry id="150" name="Конго, демократическая республика"><avg>57.25</avg><man>55</man><woman>59.5</woman></entry>
+<entry id="151" name="Гаити"><avg>57.1</avg><man>55.4</man><woman>58.8</woman></entry>
+<entry id="152" name="Сенегал"><avg>56.7</avg><man>55.3</man><woman>58.1</woman></entry>
+<entry id="153" name="Лаос"><avg>55.9</avg><man>53.8</man><woman>58</woman></entry>
+<entry id="154" name="Кения"><avg>55.3</avg><man>55.2</man><woman>55.4</woman></entry>
+<entry id="155" name="Бутан"><avg>55.2</avg><man>55.4</man><woman>55</woman></entry>
+<entry id="156" name="Гамбия"><avg>54.6</avg><man>52.7</man><woman>56.5</woman></entry>
+<entry id="157" name="Габон"><avg>54.05</avg><man>52.9</man><woman>55.2</woman></entry>
+<entry id="158" name="Бенин"><avg>53.45</avg><man>52.3</man><woman>54.6</woman></entry>
+<entry id="159" name="Мавритания"><avg>53.4</avg><man>51.2</man><woman>55.6</woman></entry>
+<entry id="160" name="Конго, республика "><avg>53.3</avg><man>52.1</man><woman>54.5</woman></entry>
+<entry id="161" name="Камерун"><avg>52.95</avg><man>52.3</man><woman>53.6</woman></entry>
+<entry id="162" name="Уганда"><avg>51.75</avg><man>50.8</man><woman>52.7</woman></entry>
+<entry id="163" name="Бурунди"><avg>51.3</avg><man>50.5</man><woman>52.1</woman></entry>
+<entry id="164" name="Танзания"><avg>50.7</avg><man>49.4</man><woman>52</woman></entry>
+<entry id="165" name="Ботсвана"><avg>50.6</avg><man>51.6</man><woman>49.6</woman></entry>
+<entry id="166" name="Гвинея"><avg>49.65</avg><man>48.5</man><woman>50.8</woman></entry>
+<entry id="167" name="Экваториальная Гвинея"><avg>49.55</avg><man>48.1</man><woman>51</woman></entry>
+<entry id="168" name="Мали"><avg>49.55</avg><man>47.6</man><woman>51.5</woman></entry>
+<entry id="169" name="Эфиопия"><avg>49.25</avg><man>48.1</man><woman>50.4</woman></entry>
+<entry id="170" name="Буркина Фасо"><avg>49.25</avg><man>47.7</man><woman>50.8</woman></entry>
+<entry id="171" name="Судан"><avg>49.1</avg><man>48.2</man><woman>50</woman></entry>
+<entry id="172" name="Руанда"><avg>49.05</avg><man>47.9</man><woman>50.2</woman></entry>
+<entry id="173" name="Кот-д’Ивуар"><avg>49.05</avg><man>46.4</man><woman>51.7</woman></entry>
+<entry id="174" name="Сомали"><avg>48.9</avg><man>47.1</man><woman>50.7</woman></entry>
+<entry id="175" name="Нигерия"><avg>47.45</avg><man>46.8</man><woman>48.1</woman></entry>
+<entry id="176" name="Чад"><avg>47.25</avg><man>46.2</man><woman>48.3</woman></entry>
+<entry id="177" name="Гвинея-Бисау"><avg>47.2</avg><man>45.4</man><woman>49</woman></entry>
+<entry id="178" name="Нигер"><avg>44.05</avg><man>44.1</man><woman>44</woman></entry>
+<entry id="179" name="Афганистан"><avg>43.8</avg><man>43.6</man><woman>44</woman></entry>
+<entry id="180" name="Центрально-Африканская Республика"><avg>43.75</avg><man>43.7</man><woman>43.8</woman></entry>
+<entry id="181" name="Джибути"><avg>43.3</avg><man>41.9</man><woman>44.7</woman></entry>
+<entry id="182" name="Намибия"><avg>43.1</avg><man>44.4</man><woman>41.8</woman></entry>
+<entry id="183" name="Малави"><avg>43</avg><man>43.4</man><woman>42.6</woman></entry>
+<entry id="184" name="Южно-Африканская Республика"><avg>42.45</avg><man>43.2</man><woman>41.7</woman></entry>
+<entry id="185" name="Мозамбик"><avg>40.9</avg><man>41.4</man><woman>40.4</woman></entry>
+<entry id="186" name="Сьерра-Леоне"><avg>40.65</avg><man>38.4</man><woman>42.9</woman></entry>
+<entry id="187" name="Либерия"><avg>40.4</avg><man>38.9</man><woman>41.9</woman></entry>
+<entry id="188" name="Лесото"><avg>39.95</avg><man>40.7</man><woman>39.2</woman></entry>
+<entry id="189" name="Зимбабве"><avg>39.5</avg><man>40.6</man><woman>38.4</woman></entry>
+<entry id="190" name="Замбия"><avg>38.4</avg><man>38.3</man><woman>38.5</woman></entry>
+<entry id="191" name="Ангола"><avg>37.65</avg><man>36.7</man><woman>38.6</woman></entry>
+<entry id="192" name="Свазиленд"><avg>32.2</avg><man>31.8</man><woman>32.6</woman></entry>
+</list>
+</propertyList>

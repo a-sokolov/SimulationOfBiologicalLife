@@ -6,8 +6,6 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import com.noga.simulationofbiologicallife.application.Application;
-
 /**
  * —редн€€ продолжительность жизни
  * @author sbt-sokolov-av
