@@ -24,7 +24,14 @@ public abstract class ModelSystem {
 	 * @param time Ссылка на конвектор времени
 	 * @see TimeConverter
 	 */
-	public abstract void updateInterval(TimeConverter time);
+	public abstract void update(TimeConverter time);
+	
+	/**
+	 * Окончание жизненного цикла системы
+	 */
+	public void die() {
+		//	
+	}
 	
 	/**
 	 * Инициализация модели 

@@ -1,5 +1,8 @@
 package com.noga.simulationofbiologicallife.game;
 
+import org.apache.log4j.Logger;
+
+import com.noga.simulationofbiologicallife.core.TimeConverter;
 import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
@@ -15,6 +18,8 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * @see GameBody
  */
 public class Game {
+	/** Логгер */
+	private static final Logger LOG = Logger.getLogger(Game.class);
 	/** Описание игры */
 	private String name;
 	/** Ссылка на игровой таймер {@link GameTimer} */
@@ -30,7 +35,19 @@ public class Game {
 	 * @see GameBody
 	 */
 	public Game(String name, GameBody body) {
-		timer = new GameTimer(this);
+		this(name, body, false);
+	}
+	
+	/**
+	 * Конструктор
+	 * @param name Описание текущей игры
+	 * @param body Тело игры
+	 * @param showTime true - отображать время таймера в логе
+	 * @see GameTimer
+	 * @see GameBody
+	 */
+	public Game(String name, GameBody body, boolean showTime) {
+		timer = new GameTimer(this, showTime);
 		this.name = name;
 		this.body = body;
 	}
@@ -48,31 +65,31 @@ public class Game {
 	 * Чтение счетчика времени в игровых минутах
 	 * @return Значение счетчика
 	 */
-	public long getTime() {
-		return timer.getTime();
+	public TimeConverter getTime() {
+		return new TimeConverter(timer.getTime());
 	}
 	
 	/** Старт */
 	public void start() {
 		body.prepare();
 		timer.start();
-		System.out.println("Game is started");
+		LOG.info("Game started");
 	}
 	
 	/** Пауза */
 	public void pause() {
 		try {
 			timer.pause();
-			System.out.println("Game is paused");
+			LOG.info("Game paused");
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			LOG.error(e);
 		}
 	}
 	
 	/** Продолжить */
 	public void resume() {
 		timer.restore();
-		System.out.println("Game is resumed");
+		LOG.info("Game resumed");
 	}
 	
 	/** Остановить */
@@ -82,11 +99,13 @@ public class Game {
 		try {
 			timer.join();
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			LOG.error(e);
 		}
 		
-		System.out.println("Game is stopped");
-		System.out.println("Total time is " + timer.getTime());
+		body.close();
+		
+		LOG.info("Game stopped");
+		LOG.info("Total time is " + timer.getTime());
 	}
 	
 	/**

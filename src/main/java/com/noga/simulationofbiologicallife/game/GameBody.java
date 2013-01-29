@@ -1,7 +1,6 @@
 package com.noga.simulationofbiologicallife.game;
 
 import com.noga.simulationofbiologicallife.core.Model;
-import com.noga.simulationofbiologicallife.core.TimeConverter;
 
 /**
  * Тело игры, которое слушает наблюдаемого {@link Game} и в случае
@@ -9,11 +8,13 @@ import com.noga.simulationofbiologicallife.core.TimeConverter;
  * @author NOGA
  * @version 1.0
  * @see Game
- * @see GameTimeConverter
  * @see Model
  */
 public class GameBody {
+	/** Ссылка на модель {@link Model} */
 	private Model model;
+	/** Ссылка на жизненный цикл {@link GameLiveCycle} */
+	private GameLiveCycle gameCycle;
 	
 	/**
 	 * Конструктор
@@ -21,6 +22,7 @@ public class GameBody {
 	 */
 	public GameBody(Model model) {
 		this.model = model;
+		gameCycle = new GameLiveCycle();
 	}
 	
 	/**
@@ -28,17 +30,30 @@ public class GameBody {
 	 * @see Model
 	 */
 	public void prepare() {
+		gameCycle.prepare();
 		model.prepare();
+	}
+	
+	/**
+	 * Закрытие тела игры
+	 * @see Model
+	 */
+	public void close() {
+		model.die();
+		model.close();
 	}
 	
 	/**
 	 * Итерация обновления данных модели
 	 * @param game Текущая игра
-	 * @see TimeConverter
 	 * @see Model
 	 */
 	public void update(Game game) {
-		TimeConverter time = new TimeConverter(game.getTime());
-		model.update(time);
+		model.update(game.getTime());
+		
+		if (!gameCycle.isAlive(model)) {
+			game.stop();
+			return;
+		}
 	}
 }

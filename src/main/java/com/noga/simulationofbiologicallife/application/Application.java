@@ -1,6 +1,5 @@
 package com.noga.simulationofbiologicallife.application;
 
-import java.text.DecimalFormat;
 import java.util.List;
 import java.io.File;
 
@@ -24,6 +23,7 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * @version 1.0
  */
 public class Application {
+	/** Логгер */
 	private static final Logger LOG = Logger.getLogger(Application.class);
 	
 	/**
@@ -32,11 +32,29 @@ public class Application {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) {
-//		DecimalFormat format = new DecimalFormat(".00");
-//		float a = 1111.02f;
-//		
-//		System.out.println(String.format("bla-bla %s", format.format(a)));
+		LOG.info("Welcome to Simulation Of Biological Life");
 		
+		Human human = new Human(Sex.MAN, new HumanSystemFactory());
+		GameBody body = new GameBody(human);
+		Game game = new Game("new game", body);
+		
+		game.setInterval(TimeInterval.MONTH);
+		
+		try {
+			game.start();
+			Thread.sleep(3000);
+			game.pause();
+			Thread.sleep(3000);
+			game.resume();
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			LOG.error(e);
+		} finally {
+			game.stop();
+		}
+	}
+	
+	public void PrepareLifeExpectancyXML() {
 		String source = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.txt";
 		String target = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.xml";
 		
@@ -47,35 +65,15 @@ public class Application {
 			
 			Serializer serializer = new Persister();
 			LifeExpectancy example = serializer.read(LifeExpectancy.class, new File(target));
-			System.out.println(example);
+			LOG.info(example);
 			
 			List<Entry> entries = example.getEntries();
 			
 			for(Entry e : entries) {
-				System.out.println(e);
+				LOG.info(e);
 			}
-		} catch (Exception ex) {
-			LOG.error("Ошибка подготовки данных", ex);
+		} catch (Exception e) {
+			LOG.error("Ошибка подготовки данных", e);
 		}
-		
-//		System.out.println("Welcome to Simulation Of Biological Life");
-//		
-//		GameBody body = new GameBody(new Human(Sex.MAN, new HumanSystemFactory()));
-//		Game game = new Game("new game", body);
-//		
-//		game.setInterval(TimeInterval.MONTH);
-//		
-//		try {
-//			game.start();
-//			Thread.sleep(30000);
-//			game.pause();
-//			Thread.sleep(3000);
-//			game.resume();
-//			Thread.sleep(5000);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			game.stop();
-//		}
 	}
 }

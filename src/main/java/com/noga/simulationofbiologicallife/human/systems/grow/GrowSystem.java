@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import com.noga.simulationofbiologicallife.core.Model;
 import com.noga.simulationofbiologicallife.core.ModelSystem;
 import com.noga.simulationofbiologicallife.core.TimeConverter;
@@ -20,8 +22,12 @@ import static com.noga.simulationofbiologicallife.core.TimeInterval.*;
  * @see Model
  */
 public class GrowSystem extends ModelSystem {
+	/** Логгер */
+	private static final Logger LOG = Logger.getLogger(GrowSystem.class);
+	/** Формат вывода */
 	private static final String OUTPUT = "%s (с %d по %d)"; 
 	
+	/** Список возрастной периодизации онтогенеза человека */
 	private List<AgePeriods> periods = new ArrayList<AgePeriods>(AgePeriods.values().length);
 	
 	/**
@@ -34,7 +40,7 @@ public class GrowSystem extends ModelSystem {
 	}
 	
 	@Override
-	public void updateInterval(TimeConverter time) {
+	public void update(TimeConverter time) {
 		Sex sex = this.getModel().getSex();
 		long minutes = time.getTime(TimeInterval.MINUTE);
 
@@ -43,9 +49,9 @@ public class GrowSystem extends ModelSystem {
 			
 			if (minutes >= period.getDaysFrom() && minutes <= period.getDaysTo()) {
 				if (!periods.contains(agePeriod)) {
-					System.out.println(String.format(OUTPUT, agePeriod.getDescription()
-														   , period.getDaysFrom()
-														   , period.getDaysTo()));
+					LOG.info(String.format(OUTPUT, agePeriod.getDescription()
+												 , period.getDaysFrom()
+												 , period.getDaysTo()));
 					periods.add(agePeriod);
 				}
 				return;

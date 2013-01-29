@@ -3,6 +3,8 @@ package com.noga.simulationofbiologicallife.core;
 import java.util.Set;
 import java.util.HashSet;
 
+import org.apache.log4j.Logger;
+
 /**
  * Модель
  * @author sbt-sokolov-av
@@ -11,12 +13,17 @@ import java.util.HashSet;
  * @see ModelSystem
  */
 public abstract class Model {
+	/** Логгер */
+	private static final Logger LOG = Logger.getLogger(Model.class);
+	
 	/** Фабрика систем  */
 	private SystemFactory systemFactory;
 	/** Коллекция систем */
 	private Set<ModelSystem> systems = new HashSet<ModelSystem>();
 	/** Половая принадлежность модели */
 	private Sex sex;
+	/** Текущее время жизни модели */
+	private TimeConverter lifeTime;
 	
 	/**
 	 * Конструктор
@@ -31,6 +38,13 @@ public abstract class Model {
 	}
 	
 	public abstract void prepare();
+
+	/**
+	 * Закрытие ссылок
+	 */
+	public void close() {
+		//
+	}
 	
 	/**
 	 * Обновления данных систем модели
@@ -38,8 +52,9 @@ public abstract class Model {
 	 * @see ModelSystem
 	 */
 	public void update(TimeConverter time) {
+		lifeTime = time;
 		for(ModelSystem system : systems) {
-			system.updateInterval(time);
+			system.update(time);
 		}
 	}
 	
@@ -67,5 +82,20 @@ public abstract class Model {
 	 */
 	public Sex getSex() {
 		return sex;
+	}
+	
+	/**
+	 * Смерть модели
+	 */
+	public void die() {
+		for(ModelSystem system : systems) {
+			system.die();
+		}
+		LOG.info("Model life time is " + lifeTime.getTime(TimeInterval.YEAR));
+		LOG.info("Model die");
+	}
+	
+	public TimeConverter getLifeTime() {
+		return lifeTime;
 	}
 }

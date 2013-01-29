@@ -1,5 +1,7 @@
 package com.noga.simulationofbiologicallife.game;
 
+import org.apache.log4j.Logger;
+
 import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
@@ -14,16 +16,19 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * @see TimeInterval
  */
 public class GameTimer extends Thread {
+	/** Логгер */
+	private static final Logger LOG = Logger.getLogger(GameTimer.class);
 	/** Время паузы в миллисекундах */
 	private static final int DELAY_PERIOD = 1000;
 	/** Время уведомления */
 	private static final int NOTICE_PERIOD = 2;
-	
+
 	/** Счетчик времени в игровых минутах */
-	private static long currentTime;
-	
+	private long currentTime;
 	/** Флаг паузы*/
 	private boolean pause = false;
+	/** Флаг логирования текущего времени*/
+	private boolean showTime = false;
 	/** Ссылка на игру */
 	private Game game;
 	/** Текущий интервал */
@@ -35,7 +40,18 @@ public class GameTimer extends Thread {
 	 * @see Game
 	 */
 	public GameTimer(Game game) {
+		this(game,  false);
+	}
+	
+	/**
+	 * Конструктор
+	 * @param game Ссылка на управляющий класс
+	 * @param showTime true - отображать время таймера в логе
+	 * @see Game
+	 */
+	public GameTimer(Game game, boolean showTime) {
 		this.game = game;
+		this.showTime = showTime;
 	}
 	
 	@Override
@@ -84,8 +100,8 @@ public class GameTimer extends Thread {
 				// декрементируем счетчик и выходим из цикла
 				currentTime--; break;
 			}
-				
-			System.out.println("Time is " + currentTime);
+			
+			if (showTime) LOG.info("Time is " + currentTime);
 		}
 	}
 	
