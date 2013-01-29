@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.List;
 import java.io.File;
 
+import org.apache.log4j.Logger;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -23,31 +24,38 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * @version 1.0
  */
 public class Application {
+	private static final Logger LOG = Logger.getLogger(Application.class);
+	
 	/**
 	 * Точка входа в приложение
 	 * @param args Входящие аргументы в виде массива
 	 * @throws Exception 
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 //		DecimalFormat format = new DecimalFormat(".00");
 //		float a = 1111.02f;
 //		
 //		System.out.println(String.format("bla-bla %s", format.format(a)));
 		
-//		String source = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.txt";
+		String source = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.txt";
 		String target = "C:\\MyJava\\workspace\\SimulationOfBiologicalLife\\src\\main\\resources\\lifeexpectancy.xml";
-//		
-//		PrepareLifeExpectancyXML generatorXML = new PrepareLifeExpectancyXML();
-//		generatorXML.generate(source, target);
-//		
-		Serializer serializer = new Persister();
-		LifeExpectancy example = serializer.read(LifeExpectancy.class, new File(target));
-		System.out.println(example);
 		
-		List<Entry> entries = example.getEntries();
+		PrepareLifeExpectancyXML generatorXML = new PrepareLifeExpectancyXML();
 		
-		for(Entry e : entries) {
-			System.out.println(e);
+		try {
+			generatorXML.generate(source, target);
+			
+			Serializer serializer = new Persister();
+			LifeExpectancy example = serializer.read(LifeExpectancy.class, new File(target));
+			System.out.println(example);
+			
+			List<Entry> entries = example.getEntries();
+			
+			for(Entry e : entries) {
+				System.out.println(e);
+			}
+		} catch (Exception ex) {
+			LOG.error("Ошибка подготовки данных", ex);
 		}
 		
 //		System.out.println("Welcome to Simulation Of Biological Life");

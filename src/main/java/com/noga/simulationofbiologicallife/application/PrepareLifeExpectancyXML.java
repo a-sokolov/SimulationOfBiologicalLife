@@ -8,8 +8,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+import org.apache.log4j.Logger;
+
 public class PrepareLifeExpectancyXML {
 	private static final String DETAIL = "<entry id=\"%d\" name=\"%s\"><avg>%s</avg><man>%s</man><woman>%s</woman></entry>\r\n";
+	private static final Logger LOG = Logger.getLogger(PrepareLifeExpectancyXML.class);
 	
 	private BufferedReader reader = null;
 	private BufferedWriter writer = null;
@@ -39,17 +42,19 @@ public class PrepareLifeExpectancyXML {
 		try { if(writer != null) writer.close(); } catch (IOException ex) { ex.printStackTrace(); };
 	}
 	
-	public void generate(String sourceDest, String targetDest) throws IOException {
+	public void generate(String sourceDest, String targetDest) throws Exception {
+		LOG.info("Start generate file");
+		
 		File source = new File(sourceDest);
-		if (!source.exists()) {
-			throw new Error("File \"" + sourceDest + "\" not exists");
+		if (source.exists()) {
+			throw new Exception("File \"" + sourceDest + "\" not exists");
 		} else if (!source.canRead()) {
-			throw new Error("File \"" + sourceDest + "\" can't read");
+			throw new Exception("File \"" + sourceDest + "\" can't read");
 		}
 		
 		File target = new File(targetDest);
 		if (!target.canWrite()) {
-			throw new Error("File \"" + targetDest + "\" can't write");
+			throw new Exception("File \"" + targetDest + "\" can't write");
 		}
 		
 		try {
@@ -65,6 +70,8 @@ public class PrepareLifeExpectancyXML {
 			}
 			
 			trailer();
+			
+			LOG.info("Finish generate file");
 		} finally {
 			close();
 		}
