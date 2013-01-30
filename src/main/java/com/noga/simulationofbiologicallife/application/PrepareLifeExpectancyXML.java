@@ -29,9 +29,9 @@ public class PrepareLifeExpectancyXML {
 		writer.write("</list>\r\n</propertyList>");
 	}
 	
-	private void detail(String[] args) throws IOException {
+	private void detail(String[] args) throws Exception {
 		if(args.length != 5) {
-			throw new Error("The number of the recording is not equal to 5");
+			throw new Exception("The number of the recording is not equal to 5");
 		}
 		
 		writer.write(String.format(DETAIL, Integer.parseInt(args[0]), args[1], args[2], args[3], args[4]));

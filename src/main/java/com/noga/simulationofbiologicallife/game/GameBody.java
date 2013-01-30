@@ -29,8 +29,8 @@ public class GameBody {
 	 * Подготовка данных до момента запуска игры
 	 * @see Model
 	 */
-	public void prepare() {
-		gameCycle.prepare();
+	public void prepare() throws Exception {
+		gameCycle.prepare(model);
 		model.prepare();
 	}
 	

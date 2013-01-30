@@ -70,7 +70,7 @@ public class Game {
 	}
 	
 	/** Старт */
-	public void start() {
+	public void start() throws Exception {
 		body.prepare();
 		timer.start();
 		LOG.info("Game started");
@@ -95,12 +95,13 @@ public class Game {
 	/** Остановить */
 	public void stop() {
 		timer.interrupt();
+		timer.stopTimer();
 		
-		try {
-			timer.join();
-		} catch (InterruptedException e) {
-			LOG.error(e);
-		}
+//		try {
+//			timer.join();
+//		} catch (InterruptedException e) {
+//			LOG.error(e);
+//		}
 		
 		body.close();
 		

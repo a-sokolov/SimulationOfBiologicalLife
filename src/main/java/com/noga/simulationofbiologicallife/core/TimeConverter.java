@@ -60,4 +60,23 @@ public class TimeConverter {
 		
 		return value;
 	}
+	
+	@Override
+	public String toString() {
+		long result;
+		long total = minutes;
+		String output = "";
+		TimeInterval times[] = {YEAR, MONTH, WEEK, DAY, HOUR, MINUTE};
+				
+		for(int i = 0; i < times.length; i++) {
+			result = total / times[i].getMinutes();
+			if (result > 0) {
+				total = total % times[i].getMinutes();
+				output += (output.length() > 0 ? " " : "") + 
+						  String.valueOf(result) + " (" + times[i].getDescription() + ")";
+			}
+		}
+		
+		return output;
+	}
 }

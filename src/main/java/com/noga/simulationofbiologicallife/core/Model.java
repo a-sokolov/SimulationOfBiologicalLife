@@ -91,7 +91,7 @@ public abstract class Model {
 		for(ModelSystem system : systems) {
 			system.die();
 		}
-		LOG.info("Model life time is " + lifeTime.getTime(TimeInterval.YEAR));
+		LOG.info("Model life time is " + lifeTime);
 		LOG.info("Model die");
 	}
 	

@@ -27,6 +27,8 @@ public class GameTimer extends Thread {
 	private long currentTime;
 	/** Флаг паузы*/
 	private boolean pause = false;
+	/** Флаг остановки таймера */
+	private boolean stop = false;
 	/** Флаг логирования текущего времени*/
 	private boolean showTime = false;
 	/** Ссылка на игру */
@@ -61,7 +63,7 @@ public class GameTimer extends Thread {
 		
 		int loops;	
 		
-		while(!isInterrupted()) {
+		while(!(isInterrupted() || stop)) {
 			// инициализация кол-ва итераций
 			loops = interval.getMinutes();
 			
@@ -97,8 +99,9 @@ public class GameTimer extends Thread {
 				// спим в текущем потоке
 				Thread.sleep(DELAY_PERIOD);
 			} catch (InterruptedException e) {
-				// декрементируем счетчик и выходим из цикла
-				currentTime--; break;
+				// Выходим из цикла
+				//currentTime--; 
+				break;
 			}
 			
 			if (showTime) LOG.info("Time is " + currentTime);
@@ -136,5 +139,12 @@ public class GameTimer extends Thread {
 	 */
 	public synchronized void setInterval(TimeInterval interval) {
 		this.interval = interval;
+	}
+	
+	/**
+	 * Флаг остановки таймер
+	 */
+	public synchronized void stopTimer() {
+		stop = true;
 	}
 }
