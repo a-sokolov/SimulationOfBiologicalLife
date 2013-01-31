@@ -1,5 +1,7 @@
 package com.noga.simulationofbiologicallife.game;
 
+import org.apache.log4j.Logger;
+
 import com.noga.simulationofbiologicallife.core.Model;
 
 /**
@@ -11,10 +13,13 @@ import com.noga.simulationofbiologicallife.core.Model;
  * @see Model
  */
 public class GameBody {
+	/** Логгер */
+	private static final Logger LOG = Logger.getLogger(GameBody.class);
+	
 	/** Ссылка на модель {@link Model} */
 	private Model model;
 	/** Ссылка на жизненный цикл {@link GameLiveCycle} */
-	private GameLiveCycle gameCycle;
+	private GameLifeCycle gameCycle;
 	
 	/**
 	 * Конструктор
@@ -22,16 +27,18 @@ public class GameBody {
 	 */
 	public GameBody(Model model) {
 		this.model = model;
-		gameCycle = new GameLiveCycle();
+		gameCycle = new GameLifeCycle();
 	}
 	
 	/**
 	 * Подготовка данных до момента запуска игры
 	 * @see Model
+	 * @see GameLifeCycle
 	 */
 	public void prepare() throws Exception {
 		gameCycle.prepare(model);
 		model.prepare();
+		LOG.info("Model sex is " + model.getSex() + " was born");
 	}
 	
 	/**
@@ -47,6 +54,7 @@ public class GameBody {
 	 * Итерация обновления данных модели
 	 * @param game Текущая игра
 	 * @see Model
+	 * @see GameLifeCycle
 	 */
 	public void update(Game game) {
 		model.update(game.getTime());

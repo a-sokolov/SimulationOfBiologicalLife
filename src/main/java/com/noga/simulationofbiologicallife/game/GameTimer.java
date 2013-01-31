@@ -24,7 +24,7 @@ public class GameTimer extends Thread {
 	private static final int NOTICE_PERIOD = 2;
 
 	/** Счетчик времени в игровых минутах */
-	private long currentTime;
+	private int currentTime;
 	/** Флаг паузы*/
 	private boolean pause = false;
 	/** Флаг остановки таймера */
@@ -59,7 +59,7 @@ public class GameTimer extends Thread {
 	@Override
 	public void run() {
 		// обнуляем счетчик времени
-		currentTime = 0L;
+		currentTime = 0;
 		
 		int loops;	
 		
@@ -112,7 +112,7 @@ public class GameTimer extends Thread {
 	 * Чтение счетчика времени в игровых минутах
 	 * @return Значение счетчика
 	 */
-	public long getTime() {
+	public int getTime() {
 		return currentTime;
 	}
 	

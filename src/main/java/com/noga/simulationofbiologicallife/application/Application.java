@@ -14,7 +14,6 @@ import com.noga.simulationofbiologicallife.human.HumanSystemFactory;
 import com.noga.simulationofbiologicallife.ref.lifeexpectancy.Entry;
 import com.noga.simulationofbiologicallife.ref.lifeexpectancy.LifeExpectancy;
 import com.noga.simulationofbiologicallife.core.Sex;
-import com.noga.simulationofbiologicallife.core.TimeConverter;
 import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
@@ -37,15 +36,15 @@ public class Application {
 		
 		Human human = new Human(Sex.MAN, new HumanSystemFactory());
 		GameBody body = new GameBody(human);
-		Game game = new Game("new game", body, true);
+		Game game = new Game("new game", body);
 		
 		game.setInterval(TimeInterval.YEAR);
 		
 		try {
 			game.start();
-			Thread.currentThread().sleep(300000);
+			Thread.sleep(300000);
 		} catch (Exception e) {
-			LOG.error(e);
+			e.printStackTrace();
 		} finally {
 			game.stop();
 		}

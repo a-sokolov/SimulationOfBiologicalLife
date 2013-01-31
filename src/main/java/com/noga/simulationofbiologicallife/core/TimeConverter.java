@@ -15,23 +15,23 @@ import static com.noga.simulationofbiologicallife.core.TimeInterval.*;
  */
 public class TimeConverter {
 	/** Текущее игровое время в минутах */
-	private long minutes;
+	private int minutes;
 	/** Игровое время в часах */ 
-	private long hours;
+	private int hours;
 	/** Игровое время в днях */
-	private long days;
+	private int days;
 	/** Игровое время в неделях */
-	private long weeks;
+	private int weeks;
 	/** Игровое время в месяцах */
-	private long months;
+	private int months;
 	/** Игровое время в годах */
-	private long years;
+	private int years;
 	
 	/**
 	 * Конструктор
 	 * @param time Время в игровых минутах
 	 */
-	public TimeConverter(long time) {
+	public TimeConverter(int time) {
 		minutes = time;
 		hours = time / HOUR.getMinutes();
 		days = time / DAY.getMinutes();
@@ -45,8 +45,8 @@ public class TimeConverter {
 	 * @param interval Интервал
 	 * @return Время в зависимости от {@link TimeInterval}
 	 */
-	public long getTime(TimeInterval interval) {
-		long value;
+	public int getTime(TimeInterval interval) {
+		int value;
 		
 		switch (interval) {
 			case MINUTE: value = minutes; break;
@@ -63,17 +63,17 @@ public class TimeConverter {
 	
 	@Override
 	public String toString() {
-		long result;
-		long total = minutes;
+		int result;
+		int total = minutes;
 		String output = "";
-		TimeInterval times[] = {YEAR, MONTH, WEEK, DAY, HOUR, MINUTE};
+		TimeInterval times[] = {YEAR, MONTH, DAY, HOUR, MINUTE};
 				
 		for(int i = 0; i < times.length; i++) {
 			result = total / times[i].getMinutes();
 			if (result > 0) {
 				total = total % times[i].getMinutes();
 				output += (output.length() > 0 ? " " : "") + 
-						  String.valueOf(result) + " (" + times[i].getDescription() + ")";
+						  String.valueOf(result) + " [" + times[i].getDescription() + "]";
 			}
 		}
 		

@@ -25,7 +25,7 @@ public class GrowSystem extends ModelSystem {
 	/** Логгер */
 	private static final Logger LOG = Logger.getLogger(GrowSystem.class);
 	/** Формат вывода */
-	private static final String OUTPUT = "%s (с %d по %d)"; 
+	private static final String OUTPUT = "%s (с %s по %s)"; 
 	
 	/** Список возрастной периодизации онтогенеза человека */
 	private List<AgePeriods> periods = new ArrayList<AgePeriods>(AgePeriods.values().length);
@@ -42,16 +42,16 @@ public class GrowSystem extends ModelSystem {
 	@Override
 	public void update(TimeConverter time) {
 		Sex sex = this.getModel().getSex();
-		long minutes = time.getTime(TimeInterval.MINUTE);
+		int minutes = time.getTime(TimeInterval.MINUTE);
 
 		for(AgePeriods agePeriod : AgePeriods.values()) {
 			Period period = agePeriod.getPeriod(sex);
 			
-			if (minutes >= period.getDaysFrom() && minutes <= period.getDaysTo()) {
+			if (minutes >= period.getFrom() && minutes <= period.getTo()) {
 				if (!periods.contains(agePeriod)) {
 					LOG.info(String.format(OUTPUT, agePeriod.getDescription()
-												 , period.getDaysFrom()
-												 , period.getDaysTo()));
+												 , new TimeConverter(period.getFrom())
+												 , new TimeConverter(period.getTo())));
 					periods.add(agePeriod);
 				}
 				return;
@@ -64,8 +64,8 @@ public class GrowSystem extends ModelSystem {
 	 * @author NOGA
 	 */
 	private enum AgePeriods {
-		NEWBORN("Новорожденный", new Period(1, 10))
-		, BABY("Грудной возраст", new Period(10, YEAR.getMinutes()))
+		NEWBORN("Новорожденный", new Period(1, DAY.getMinutes() * 10))
+		, BABY("Грудной возраст", new Period(DAY.getMinutes() * 10, YEAR.getMinutes()))
 		, INFANCY("Раннее детство", new Period(YEAR.getMinutes(), YEAR.getMinutes() * 3))
 		, FIRST_CHILDHOOD("Первое детство", new Period(YEAR.getMinutes() * 4, YEAR.getMinutes() * 7))
 		, SECOND_CHILDHOOD("Второе детство", new Period(YEAR.getMinutes() * 8, YEAR.getMinutes() * 12)

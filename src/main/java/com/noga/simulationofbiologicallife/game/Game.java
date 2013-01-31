@@ -9,7 +9,7 @@ import com.noga.simulationofbiologicallife.core.TimeInterval;
  * Класс, который отвечает за запуск и управление игрой.<br>
  * Каждая новая игра должна начинаться с создания ного экземпляра класса.
  * <p>Пример:<br>
- * <i>Game game = new Game("test game");<br>
+ * <i>Game game = new Game("test game", new GameBody());<br>
  * game.start();<br>
  * ...<br>
  * game.stop();</i>
@@ -50,15 +50,6 @@ public class Game {
 		timer = new GameTimer(this, showTime);
 		this.name = name;
 		this.body = body;
-	}
-	
-	/**
-	 * Чтение описания игры
-	 * @return Описание игры
-	 */
-	@Deprecated
-	public String getName() {
-		return name;
 	}
 	
 	/**
