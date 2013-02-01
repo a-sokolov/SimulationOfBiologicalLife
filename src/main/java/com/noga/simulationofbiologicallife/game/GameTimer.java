@@ -2,6 +2,7 @@ package com.noga.simulationofbiologicallife.game;
 
 import org.apache.log4j.Logger;
 
+import com.noga.simulationofbiologicallife.core.TimeConverter;
 import com.noga.simulationofbiologicallife.core.TimeInterval;
 
 /**
@@ -104,7 +105,7 @@ public class GameTimer extends Thread {
 				break;
 			}
 			
-			if (showTime) LOG.info("Time is " + currentTime);
+			if (showTime) LOG.info("Time is " + new TimeConverter(currentTime));
 		}
 	}
 	

@@ -97,7 +97,7 @@ public class Game {
 		body.close();
 		
 		LOG.info("Game stopped");
-		LOG.info("Total time is " + timer.getTime());
+		LOG.info("Total time is " + this.getTime());
 	}
 	
 	/**

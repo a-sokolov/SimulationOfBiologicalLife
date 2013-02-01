@@ -34,9 +34,9 @@ public class Application {
 	public static void main(String[] args) {
 		LOG.info("Welcome to Simulation Of Biological Life");
 		
-		Human human = new Human(Sex.MAN, new HumanSystemFactory());
+		Human human = new Human(Sex.WOMAN, new HumanSystemFactory());
 		GameBody body = new GameBody(human);
-		Game game = new Game("new game", body);
+		Game game = new Game("new game", body, true);
 		
 		game.setInterval(TimeInterval.YEAR);
 		
